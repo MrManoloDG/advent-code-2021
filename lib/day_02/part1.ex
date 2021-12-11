@@ -4,7 +4,7 @@ defmodule Day2Part1 do
   import FileUtils
 
   def run() do
-    FileUtils.read_file_lines('lib/day_02/example_data.txt')
+    FileUtils.read_file_lines('lib/day_02/data.txt')
     |>Enum.reduce(%{depth: 0, horizontal: 0}, fn command, %{depth: depth, horizontal: horizontal} ->
       splited_command = String.split(command)
       op = Enum.at(splited_command, 0)
